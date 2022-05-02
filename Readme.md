@@ -7,8 +7,9 @@
 * macos (12.x) compilation:
   * `mkdir build && cd build`
   * `cmake .. -DQt5_DIR=$(brew --prefix qt@5)/lib/cmake/Qt5 -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0 -DCMAKE_PREFIX_PATH=/usr/local/Cellar/qt@5/5.15.3 -DENABLE_NOGUI=OFF -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DENCODE_FRAMEDUMPS=ON`
+  * `make -j`
 
-* TODO:
+* In Progress:
   * UNIX fifo pipe framedumps
 
 

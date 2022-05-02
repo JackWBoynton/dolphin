@@ -23,7 +23,7 @@
 namespace ciface::Pipes
 {
 static const std::array<std::string, 12> s_button_tokens{
-    {"A", "B", "X", "Y", "Z", "START", "L", "R", "D_UP", "D_DOWN", "D_LEFT", "D_RIGHT"}};
+    {"A", "B", "X", "Y", "Z", "START", "L", "R", "D_UP", "D_DOWN", "D_LEFT", "D_RIGHT", "LOAD", "PAUSE"}};
 
 static const std::array<std::string, 2> s_shoulder_tokens{{"L", "R"}};
 

@@ -1,5 +1,17 @@
 # Dolphin - A GameCube and Wii Emulator
 
+## My Changes:
+* Added LOAD and PAUSE FIFO pipe inputs for hotkeys in `./Source/Core/InputCommon/ControllerInterface/Pipes/Pipes.cpp` -> `static const std::array<std::string, 12> s_button_tokens{
+    {"A", "B", "X", "Y", "Z", "START", "L", "R", "D_UP", "D_DOWN", "D_LEFT", "D_RIGHT", "LOAD", "PAUSE", "PLAY"}};`
+
+* macos (12.x) compilation:
+  * `mkdir build && cd build`
+  * `cmake .. -DQt5_DIR=$(brew --prefix qt@5)/lib/cmake/Qt5 -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0 -DCMAKE_PREFIX_PATH=/usr/local/Cellar/qt@5/5.15.3 -DENABLE_NOGUI=OFF -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DENCODE_FRAMEDUMPS=ON`
+
+* TODO:
+  * UNIX fifo pipe framedumps
+
+
 [Homepage](https://dolphin-emu.org/) | [Project Site](https://github.com/dolphin-emu/dolphin) | [Buildbot](https://dolphin.ci) | [Forums](https://forums.dolphin-emu.org/) | [Wiki](https://wiki.dolphin-emu.org/) | [Issue Tracker](https://bugs.dolphin-emu.org/projects/emulator/issues) | [Coding Style](https://github.com/dolphin-emu/dolphin/blob/master/Contributing.md) | [Transifex Page](https://www.transifex.com/projects/p/dolphin-emu/)
 
 Dolphin is an emulator for running GameCube and Wii games on Windows,

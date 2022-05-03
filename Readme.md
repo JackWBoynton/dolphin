@@ -1,6 +1,7 @@
 # Dolphin - A GameCube and Wii Emulator
 
-## My Changes:
+## My Changes
+
 * Added LOAD and PAUSE FIFO pipe inputs for hotkeys in `./Source/Core/InputCommon/ControllerInterface/Pipes/Pipes.cpp` -> `static const std::array<std::string, 15> s_button_tokens{
     {"A", "B", "X", "Y", "Z", "START", "L", "R", "D_UP", "D_DOWN", "D_LEFT", "D_RIGHT", "LOAD", "PAUSE", "PLAY"}};`
 
@@ -12,7 +13,6 @@
 
 * In Progress:
   * UNIX fifo pipe framedumps
-
 
 [Homepage](https://dolphin-emu.org/) | [Project Site](https://github.com/dolphin-emu/dolphin) | [Buildbot](https://dolphin.ci) | [Forums](https://forums.dolphin-emu.org/) | [Wiki](https://wiki.dolphin-emu.org/) | [Issue Tracker](https://bugs.dolphin-emu.org/projects/emulator/issues) | [Coding Style](https://github.com/dolphin-emu/dolphin/blob/master/Contributing.md) | [Transifex Page](https://www.transifex.com/projects/p/dolphin-emu/)
 
@@ -27,26 +27,26 @@ Please read the [FAQ](https://dolphin-emu.org/docs/faq/) before using Dolphin.
 ### Desktop
 
 * OS
-    * Windows (7 SP1 or higher).
-    * Linux.
-    * macOS (10.13 High Sierra or higher).
-    * Unix-like systems other than Linux are not officially supported but might work.
+  * Windows (7 SP1 or higher).
+  * Linux.
+  * macOS (10.13 High Sierra or higher).
+  * Unix-like systems other than Linux are not officially supported but might work.
 * Processor
-    * A CPU with SSE2 support.
-    * A modern CPU (3 GHz and Dual Core, not older than 2008) is highly recommended.
+  * A CPU with SSE2 support.
+  * A modern CPU (3 GHz and Dual Core, not older than 2008) is highly recommended.
 * Graphics
-    * A reasonably modern graphics card (Direct3D 11.1 / OpenGL 3.3).
-    * A graphics card that supports Direct3D 11.1 / OpenGL 4.4 is recommended.
+  * A reasonably modern graphics card (Direct3D 11.1 / OpenGL 3.3).
+  * A graphics card that supports Direct3D 11.1 / OpenGL 4.4 is recommended.
 
 ### Android
 
 * OS
-    * Android (5.0 Lollipop or higher).
+  * Android (5.0 Lollipop or higher).
 * Processor
-    * A processor with support for 64-bit applications (either ARMv8 or x86-64).
+  * A processor with support for 64-bit applications (either ARMv8 or x86-64).
 * Graphics
-    * A graphics processor that supports OpenGL ES 3.0 or higher. Performance varies heavily with [driver quality](https://dolphin-emu.org/blog/2013/09/26/dolphin-emulator-and-opengl-drivers-hall-fameshame/).
-    * A graphics processor that supports standard desktop OpenGL features is recommended for best performance.
+  * A graphics processor that supports OpenGL ES 3.0 or higher. Performance varies heavily with [driver quality](https://dolphin-emu.org/blog/2013/09/26/dolphin-emulator-and-opengl-drivers-hall-fameshame/).
+  * A graphics processor that supports standard desktop OpenGL features is recommended for best performance.
 
 Dolphin can only be installed on devices that satisfy the above requirements. Attempting to install on an unsupported device will fail and display an error message.
 
@@ -58,6 +58,7 @@ able to build Dolphin on Windows but have not been tested and are not
 recommended to be used. Git and Windows 11 SDK must be installed when building.
 
 Make sure to pull submodules before building:
+
 ```sh
 git submodule update --init
 ```
@@ -78,13 +79,14 @@ will inform you if a bundled library is used or if you need to install any
 missing packages yourself.
 
 Make sure to pull submodules before building:
+
 ```sh
 git submodule update --init
 ```
 
-### macOS Build Steps:
+### macOS Build Steps
 
-A binary supporting a single architecture can be built using the following steps: 
+A binary supporting a single architecture can be built using the following steps:
 
 1. `mkdir build`
 2. `cd build`
@@ -102,10 +104,10 @@ application bundle using the following steps:
 4. Universal binaries will be available in the `universal` folder
 
 Doing this is more complex as it requires installation of library dependencies for both x64 and ARM (or universal library
-equivalents) and may require specifying additional arguments to point to relevant library locations. 
+equivalents) and may require specifying additional arguments to point to relevant library locations.
 Execute BuildMacOSUniversalBinary.py --help for more details.  
 
-### Linux Global Build Steps:
+### Linux Global Build Steps
 
 To install to your system.
 
@@ -115,7 +117,7 @@ To install to your system.
 4. `make`
 5. `sudo make install`
 
-### Linux Local Build Steps:
+### Linux Local Build Steps
 
 Useful for development as root access is not required.
 
@@ -125,7 +127,7 @@ Useful for development as root access is not required.
 4. `make`
 5. `ln -s ../../Data/Sys Binaries/`
 
-### Linux Portable Build Steps:
+### Linux Portable Build Steps
 
 Can be stored on external storage and used on different Linux systems.
 Or useful for having multiple distinct Dolphin setups for testing/development/TAS.
@@ -143,6 +145,7 @@ These instructions assume familiarity with Android development. If you do not ha
 Android dev environment set up, see [AndroidSetup.md](AndroidSetup.md).
 
 Make sure to pull submodules before building:
+
 ```sh
 git submodule update --init
 ```

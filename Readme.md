@@ -1,10 +1,11 @@
 # Dolphin - A GameCube and Wii Emulator
 
 ## My Changes:
-* Added LOAD and PAUSE FIFO pipe inputs for hotkeys in `./Source/Core/InputCommon/ControllerInterface/Pipes/Pipes.cpp` -> `static const std::array<std::string, 12> s_button_tokens{
+* Added LOAD and PAUSE FIFO pipe inputs for hotkeys in `./Source/Core/InputCommon/ControllerInterface/Pipes/Pipes.cpp` -> `static const std::array<std::string, 15> s_button_tokens{
     {"A", "B", "X", "Y", "Z", "START", "L", "R", "D_UP", "D_DOWN", "D_LEFT", "D_RIGHT", "LOAD", "PAUSE", "PLAY"}};`
 
 * macos (12.x) compilation:
+  * `git submodule update --init --recursive`
   * `mkdir build && cd build`
   * `cmake .. -DQt5_DIR=$(brew --prefix qt@5)/lib/cmake/Qt5 -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0 -DCMAKE_PREFIX_PATH=/usr/local/Cellar/qt@5/5.15.3 -DENABLE_NOGUI=OFF -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DENCODE_FRAMEDUMPS=ON`
   * `make -j`
